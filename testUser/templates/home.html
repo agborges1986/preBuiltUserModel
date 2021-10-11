@@ -1,0 +1,9 @@
+<body>
+    <h1>Usuarios</h1>
+    {% for user in users %}
+        <p>{{ user.first_name }} {{ user.username }}</p>
+    {% endfor %}
+    <h1>Usuario session</h1>
+    {{active}}
+
+</body>

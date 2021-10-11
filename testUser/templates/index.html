@@ -1,0 +1,24 @@
+<body>
+{% if form2 %}
+    <form class="" action="/register" method="post">
+    {% csrf_token %}
+    {{ form2.as_p }}
+    {% comment %} {{ regForm.as_p }}
+    {{ regForm.as_table }}
+    {{ regForm.as_ul }} {% endcomment %}
+    <!--  ".as_p" es un ejemplo de una opción que puede adjuntar a los inputs del formulario
+    "as_table" y "as_ul" son algunos otros...-->
+    <input type="submit" value="register">
+    </form>
+{%endif %}
+    <form class="" action="/home" method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    {% comment %} {{ regForm.as_p }}
+    {{ regForm.as_table }}
+    {{ regForm.as_ul }} {% endcomment %}
+    <!--  ".as_p" es un ejemplo de una opción que puede adjuntar a los inputs del formulario
+    "as_table" y "as_ul" son algunos otros...-->
+    <input type="submit" value="inicio">
+    </form>
+</body>
